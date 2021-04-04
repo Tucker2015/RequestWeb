@@ -20,7 +20,7 @@ const IndexPage = () => {
         `}
       </style>
       <div style={{ marginBottom: "2rem" }}>
-        <h2>Hello, {user ? user.name : "Dickhead"}!</h2>
+        <h2>Hello, {user ? user.name : "Please Register an Account"}!</h2>
         <p>Have a wonderful day.</p>
       </div>
       <div>
