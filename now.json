@@ -1,14 +1,14 @@
 {
-  "name": "nextjs-mongodb-app",
-  "version": 2,
+  "name": "request-site",
+  "version": 1,
   "build": {
     "env": {
-      "MONGODB_URI": "mongodb+srv://testuser:dontreusethis@cluster0-gc0a7.mongodb.net/nextjsmongodbapp?retryWrites=true&w=majority",
+      "MONGODB_URI": "mongodb+srv://kevtucker:Baggersb20@mernauth.6wgpp.mongodb.net/Auth?retryWrites=true&w=majority",
       "CLOUDINARY_URL": "cloudinary://741947492169653:vkyuRmZ3EbSULnkfXJdtSqwhURw@dbplcha6k",
-      "DB_NAME": "nextjsmongodbapp",
+      "DB_NAME": "Auth",
       "SENDGRID_API_KEY": "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",
-      "EMAIL_FROM": "hello@nextjs-mongodb.now.sh",
-      "WEB_URI": "https://nextjs-mongodb.now.sh",
+      "EMAIL_FROM": "mail@kevtucker.com",
+      "WEB_URI": "https://request-web.vercel.app",
       "SESSION_SECRET": "keyboard cat",
       "USING_SECRETS": "Consider using Zeit Now Secrets instead."
     }

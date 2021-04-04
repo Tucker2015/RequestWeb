@@ -1,7 +1,7 @@
 {
-  "name": "nextjs-mongodb-app",
+  "name": "request-site",
   "version": "1.0.0",
-  "description": "Full fledged app made with Next.JS and MongoDB",
+  "description": "Requests for Radio Tracks",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hoangvvo/nextjs-mongodb-app.git"
+    "url": "git+https://github.com/Tucker2015/RequestWeb.git"
   },
-  "author": "Hoang Vo (https://hoangvvo.com)",
+  "author": "Kevin Tucker",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hoangvvo/nextjs-mongodb-app/issues"
   },
-  "homepage": "https://github.com/hoangvvo/nextjs-mongodb-app#readme",
+  "homepage": "https://request-web.vercel.app",
   "dependencies": {
     "@sendgrid/mail": "^7.4.0",
     "bcryptjs": "^2.4.3",
