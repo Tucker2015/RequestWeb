@@ -1,6 +1,6 @@
 {
   "name": "request-site",
-  "version": 1,
+  "version": 3,
   "build": {
     "env": {
       "MONGODB_URI": "mongodb+srv://kevtucker:Baggersb20@mernauth.6wgpp.mongodb.net/Auth?retryWrites=true&w=majority",
