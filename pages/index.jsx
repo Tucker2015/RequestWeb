@@ -12,15 +12,16 @@ const IndexPage = () => {
         {`
           p {
             text-align: center;
-            color: #888;
+            color: #000;
+            font-size: 24px;
           }
           h3 {
-            color: #555;
+            color: #000;
           }
         `}
       </style>
       <div style={{ marginBottom: "2rem" }}>
-        <h2>Hello, {user ? user.name : "Please Register an Account"}!</h2>
+        <h3>Hello, {user ? user.name : "Please Register an Account"}!</h3>
         <p>Have a wonderful day.</p>
       </div>
       <div>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { useCurrentUser } from "@/hooks/index";
-import RequestPage from "./test";
 
 const ProfileSection = () => {
   const [user, { mutate }] = useCurrentUser();
@@ -83,7 +82,8 @@ const ProfileSection = () => {
       <Head>
         <title>Settings</title>
       </Head>
-      <section>
+
+      <div className="container">
         <h2>Edit Profile</h2>
         {msg.message ? (
           <p
@@ -160,7 +160,7 @@ const ProfileSection = () => {
           </label>
           <button type="submit">Change Password</button>
         </form>
-      </section>
+      </div>
     </>
   );
 };
@@ -179,7 +179,6 @@ const SettingPage = () => {
     <>
       <h1>Settings</h1>
       <ProfileSection />
-      <RequestPage url={user.bio} />
     </>
   );
 };

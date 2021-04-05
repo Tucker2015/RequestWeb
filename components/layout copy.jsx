@@ -34,52 +34,43 @@ export default function Layout({ children }) {
           content="https://repository-images.githubusercontent.com/201392697/5d392300-eef3-11e9-8e20-53310193fbfd"
         />
       </Head>
-
-      <section>
-        <div className="container">
-          <header>
-            <Link href="/">
-              <a className="logo">Station Request Site</a>
-            </Link>
-            <ul>
-              <li>
-                <Link href="/">
-                  <a className="active">Home</a>
+      <header>
+        <nav>
+          <Link href="/">
+            <a>
+              <h1>Station Request Site</h1>
+            </a>
+          </Link>
+          <div>
+            {!user ? (
+              <>
+                <Link href="/login">
+                  <a>Sign in</a>
                 </Link>
-              </li>
-              {!user ? (
-                <>
-                  <li>
-                    <Link href="/login">
-                      <a>Sign In</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/signup">
-                      <a>Register</a>
-                    </Link>
-                  </li>
-                </>
-              ) : (
-                <>
-                  <li>
-                    <Link href={`/user/${user._id}`}>
-                      <a>Profile</a>
-                    </Link>
-                  </li>
+                <Link href="/signup">
+                  <a>Sign up</a>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link href={`/user/${user._id}`}>
+                  <a>Profile</a>
+                </Link>
 
-                  <li>
-                    <a tabIndex={0} role="button" onClick={handleLogout}>
-                      Logout
-                    </a>
-                  </li>
-                </>
-              )}
-            </ul>
-          </header>
-          <main className="content">{children}</main>
-        </div>
-      </section>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                <a tabIndex={0} role="button" onClick={handleLogout}>
+                  Logout
+                </a>
+              </>
+            )}
+          </div>
+        </nav>
+      </header>
+
+      <main>{children}</main>
+      <footer>
+        <h2>Station Request Site</h2>
+      </footer>
     </>
   );
 }

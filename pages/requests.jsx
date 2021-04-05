@@ -54,7 +54,14 @@ const RequestPage = (props) => {
             }
           `}
         </style>
-        <div className="borderBx" style={{ border: "1px solid #000" }}>
+        <div
+          className="borderBx"
+          style={{
+            border: "3px solid #000",
+            display: "flex",
+            flexDirection: "column-reverse",
+          }}
+        >
           {posts.map((result) => {
             const {
               id,
@@ -69,12 +76,10 @@ const RequestPage = (props) => {
               <div className="borderBx" key={id}>
                 <div
                   className="card-title"
-                  style={{ background: "#442444", color: "#fff" }}
+                  style={{ background: "#442444", color: "#fff", fontSize: 24 }}
                 >
-                  <span>
-                    {contact}
-                    {station}
-                  </span>
+                  {contact}
+                  {station}
                 </div>
                 <div className="card-body">
                   <h5>Comment : {comment}</h5>
@@ -111,15 +116,9 @@ const RequestPage = (props) => {
         <h3></h3>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-center">Station Requests</h1>
-      <h3> Welcome back {user ? user.name : "Dickhead"}</h3>
+      <h1 className="text-center">Your Station Requests</h1>
       <h4 className="text-center">Digital Retroland</h4>
-      <h3 className="mt-5 title text-center">
-        Back to{" "}
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </h3>
+
       <div>
         <Card />
       </div>
