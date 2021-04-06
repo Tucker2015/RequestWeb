@@ -14,24 +14,19 @@ const IndexPage = () => {
             text-align: center;
             color: #888;
           }
-          h3 {
-            color: #555;
+          h2 {
+            color: #1d0404;
           }
         `}
       </style>
-      <div style={{ marginBottom: "2rem" }}>
-        <h2>Hello, {user ? user.name : "Please Register an Account"}!</h2>
-        <p>Have a wonderful day.</p>
-      </div>
-      <div>
-        <h3>
-          All posts from the Web{" "}
-          <span role="img" aria-label="Earth">
-            🌎
-          </span>
-        </h3>
-        <PostEditor />
-        <Posts />
+      <div style={{ marginBottom: "2rem", textAlign: "center" }}>
+        <h2>
+          Please{" "}
+          <a href="mailto:someone@example.com?subject=Apply to Register Station Request Account">
+            Contact Us
+          </a>{" "}
+          to Register an Account
+        </h2>
       </div>
     </>
   );

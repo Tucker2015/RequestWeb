@@ -1,15 +1,18 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useCurrentUser } from "@/hooks/index";
 
 export default function Layout({ children }) {
+  const router = useRouter();
   const [user, { mutate }] = useCurrentUser();
   const handleLogout = async () => {
     await fetch("/api/auth", {
       method: "DELETE",
     });
     mutate(null);
+    router.push("/");
   };
   return (
     <>
@@ -51,11 +54,11 @@ export default function Layout({ children }) {
                       <a>Sign In</a>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/signup">
                       <a>Register</a>
                     </Link>
-                  </li>
+                  </li> */}
                 </>
               ) : (
                 <>

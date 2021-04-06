@@ -42,18 +42,6 @@ const RequestPage = (props) => {
   const Card = () => {
     return (
       <>
-        <style jsx global>
-          {`
-            h5 {
-              color: #000;
-              font-size: 1rem;
-            }
-            borderBx {
-              border: 1px solid #d8d8d8;
-              background: #47859595;
-            }
-          `}
-        </style>
         <div
           className="borderBx"
           style={{
