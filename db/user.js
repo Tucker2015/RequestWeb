@@ -32,6 +32,7 @@ export async function insertUser(db, {
       emailVerified: false,
       profilePicture,
       email,
+      // streamKey: nanoid(8),
       password,
       name,
       bio,

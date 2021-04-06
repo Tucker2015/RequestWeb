@@ -4,7 +4,7 @@ import Link from "next/link";
 import Error from "next/error";
 import { all } from "@/middlewares/index";
 import { useCurrentUser } from "@/hooks/index";
-import Posts from "@/components/post/posts";
+// import Posts from "@/components/post/posts";
 import { extractUser } from "@/lib/api-helpers";
 import { findUserById } from "@/db/index";
 import { defaultProfilePicture } from "@/lib/default";
@@ -12,7 +12,7 @@ import RequestPage from "../../requests";
 
 export default function UserPage({ user }) {
   if (!user) return <Error statusCode={404} />;
-  const { name, email, bio, profilePicture, _id } = user || {};
+  const { name, email, bio, profilePicture, _id, streamKey } = user || {};
   const [currentUser] = useCurrentUser();
   const isCurrentUser = currentUser?._id === user._id;
   return (
@@ -44,7 +44,6 @@ export default function UserPage({ user }) {
       </div>
       <div>
         <RequestPage url={user.bio} />
-        {/* <Posts creatorId={user._id} /> */}
       </div>
     </>
   );
