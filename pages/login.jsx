@@ -59,7 +59,10 @@ const LoginPage = () => {
               placeholder="Password"
             />
           </label>
-          <button type="submit">Sign in</button>
+
+          <button style={{ cursor: "pointer" }} type="submit">
+            Sign in
+          </button>
           <Link href="/forget-password">
             <a>Forgot password</a>
           </Link>
