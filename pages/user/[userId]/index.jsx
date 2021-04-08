@@ -20,7 +20,12 @@ export default function UserPage({ user }) {
       <Head>
         <title>{name}</title>
       </Head>
-      <div className="container">
+      <div>
+        <h1 style={{ textAlign: "center" }}>
+          Hello {name}, Here is your Station Requests
+        </h1>
+      </div>
+      {/* <div className="container">
         <img
           src={profilePicture || defaultProfilePicture(_id)}
           width="200"
@@ -41,7 +46,7 @@ export default function UserPage({ user }) {
           Email
           <p>{email}</p>
         </div>
-      </div>
+      </div> */}
       <div>
         <RequestPage url={user.bio} />
       </div>
