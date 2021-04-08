@@ -17,6 +17,25 @@ section {
   background-attachment: fixed;
   padding: 50px;
 }
+.borderBx {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+.box {
+  margin: 10px;
+  border: 1px solid #000;
+  width: 100%;
+}
+.btn {
+  font-size: 20;
+  font-weight: "600";
+  background: "#c42626";
+  border: "none";
+  padding: 10;
+  border-radius: 10;
+  margin: 10;
+}
 .container {
   position: relative;
   width: calc(100% - 100px);
@@ -146,6 +165,7 @@ header ul li a:active {
     padding: 30px;
     margin-top: -40px;
   }
+
   header {
     position: relative;
     flex-direction: column;

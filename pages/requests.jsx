@@ -7,8 +7,8 @@ import { useCurrentUser } from "@/hooks/index";
 const RequestPage = (props) => {
   const [user] = useCurrentUser();
 
-  function removeData(id) {
-    fetch("https://requests.kevtucker.com/requests/" + id, {
+  function removeData(id, url) {
+    fetch(user.bio + "/" + id, {
       method: "DELETE",
     })
       .then(() => {
@@ -42,14 +42,7 @@ const RequestPage = (props) => {
   const Card = () => {
     return (
       <main className="container">
-        <div
-          className="borderBx"
-          style={{
-            border: "1px solid #000",
-            width: "100%",
-            flexDirection: "column-reverse",
-          }}
-        >
+        <div className="borderBx">
           {posts.map((result) => {
             const {
               id,
@@ -61,7 +54,7 @@ const RequestPage = (props) => {
               station,
             } = result;
             return (
-              <div className="borderBx" key={id}>
+              <div className="box" key={id}>
                 <div
                   className="card-title"
                   style={{
@@ -70,7 +63,6 @@ const RequestPage = (props) => {
                     fontSize: 26,
                     padding: 10,
                     display: "flex",
-                    flexDirection: "row",
                     justifyContent: "space-between",
                   }}
                 >
@@ -83,20 +75,11 @@ const RequestPage = (props) => {
                   <h5>Track : {track}</h5>
                   <h5>Location : {location}</h5>
                   <button
-                    className=""
-                    style={{
-                      color: "#fff",
-                      fontSize: 20,
-                      fontWeight: "600",
-                      background: "#444",
-                      border: "none",
-                      padding: 10,
-                      borderRadius: 10,
-                      margin: 10,
-                    }}
+                    className="btn"
+                    style={{}}
                     onClick={() => removeData(id)}
                   >
-                    Delete Request
+                    <i class="fas fa-trash-alt"></i> Delete Request
                   </button>
                 </div>
               </div>

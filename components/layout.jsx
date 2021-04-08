@@ -33,6 +33,12 @@ export default function Layout({ children }) {
           property="og:image"
           content="https://repository-images.githubusercontent.com/201392697/5d392300-eef3-11e9-8e20-53310193fbfd"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossOrigin="anonymous"
+        />
       </Head>
 
       <section>
@@ -64,7 +70,7 @@ export default function Layout({ children }) {
                 <>
                   <li>
                     <Link href={`/user/${user._id}`}>
-                      <a>Profile</a>
+                      <a>Requests</a>
                     </Link>
                   </li>
 
