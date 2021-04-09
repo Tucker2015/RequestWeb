@@ -21,32 +21,10 @@ export default function UserPage({ user }) {
         <title>{name}</title>
       </Head>
       <div>
-        <h1 style={{ textAlign: "center" }}>
+        <h1 className="" style={{ textAlign: "center" }}>
           Hello {name}, Here is your Station Requests
         </h1>
       </div>
-      {/* <div className="container">
-        <img
-          src={profilePicture || defaultProfilePicture(_id)}
-          width="200"
-          height="200"
-          alt={name}
-        />
-        <div>
-          <h2>{name}</h2>
-          {isCurrentUser && (
-            <Link href="/settings">
-              <button type="button">Edit</button>
-            </Link>
-          )}
-        </div>
-        <div style={{ marginTop: 10 }}>
-          Station Request URL
-          <p>{bio}</p>
-          Email
-          <p>{email}</p>
-        </div>
-      </div> */}
       <div>
         <RequestPage url={user.bio} />
       </div>
