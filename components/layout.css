@@ -6,6 +6,13 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
+h1 {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
 section {
   display: flex;
   justify-content: center;
@@ -17,6 +24,13 @@ section {
   background-attachment: fixed;
   padding: 50px;
 }
+.profile {
+  text-align: center;
+  display: inline;
+  margin: 10px;
+  border: 1px solid rgb(47, 107, 181);
+  width: 100%;
+}
 .borderBx {
   display: flex;
   flex-direction: column-reverse;
@@ -24,17 +38,23 @@ section {
 }
 .box {
   margin: 10px;
-  border: 1px solid #000;
+  border: 1px solid rgb(47, 107, 181);
   width: 100%;
 }
-.btn {
-  font-size: 20;
-  font-weight: "600";
-  background: "#c42626";
-  border: "none";
-  padding: 10;
-  border-radius: 10;
-  margin: 10;
+.button {
+  font-size: 20px;
+  font-weight: 300;
+  background: #884545;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.button:hover {
+  background: #a40c0c;
 }
 .container {
   position: relative;
@@ -170,22 +190,23 @@ header ul li a:active {
     position: relative;
     flex-direction: column;
     width: 100%;
-    top: -60px;
+    top: -80px;
     padding: 20px;
     right: 0;
     left: 0;
   }
   header ul {
     margin-top: 10px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
   }
   header ul li {
     margin: 8px;
   }
   header ul li a {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
   header .logo {
     color: #fff;

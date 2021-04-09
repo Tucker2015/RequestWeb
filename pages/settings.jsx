@@ -84,82 +84,84 @@ const ProfileSection = () => {
       </Head>
 
       <div className="container">
-        <h2>Edit Profile</h2>
-        {msg.message ? (
-          <p
-            style={{
-              color: msg.isError ? "red" : "#0070f3",
-              textAlign: "center",
-            }}
-          >
-            {msg.message}
-          </p>
-        ) : null}
-        <form onSubmit={handleSubmit}>
-          {!user.emailVerified ? (
-            <p>
-              Your email has not been verify. {/* eslint-disable-next-line */}
-              <a role="button" onClick={sendVerificationEmail}>
-                Send verification email
-              </a>
+        <div className="profile">
+          <h2>Edit Profile</h2>
+          {msg.message ? (
+            <p
+              style={{
+                color: msg.isError ? "red" : "#0070f3",
+                textAlign: "center",
+              }}
+            >
+              {msg.message}
             </p>
           ) : null}
-          <label htmlFor="name">
-            Name
-            <input
-              required
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Your name"
-              ref={nameRef}
-            />
-          </label>
-          <label htmlFor="bio">
-            Bio
-            <textarea
-              id="bio"
-              name="bio"
-              type="text"
-              placeholder="Bio"
-              ref={bioRef}
-            />
-          </label>
-          <label htmlFor="avatar">
-            Profile picture
-            <input
-              type="file"
-              id="avatar"
-              name="avatar"
-              accept="image/png, image/jpeg"
-              ref={profilePictureRef}
-            />
-          </label>
-          <button disabled={isUpdating} type="submit">
-            Save
-          </button>
-        </form>
-        <form onSubmit={handleSubmitPasswordChange}>
-          <label htmlFor="oldpassword">
-            Old Password
-            <input
-              type="password"
-              name="oldPassword"
-              id="oldpassword"
-              required
-            />
-          </label>
-          <label htmlFor="newpassword">
-            New Password
-            <input
-              type="password"
-              name="newPassword"
-              id="newpassword"
-              required
-            />
-          </label>
-          <button type="submit">Change Password</button>
-        </form>
+          <form onSubmit={handleSubmit}>
+            {!user.emailVerified ? (
+              <p>
+                Your email has not been verify. {/* eslint-disable-next-line */}
+                <a role="button" onClick={sendVerificationEmail}>
+                  Send verification email
+                </a>
+              </p>
+            ) : null}
+            <label htmlFor="name">
+              Name
+              <input
+                required
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                ref={nameRef}
+              />
+            </label>
+            <label htmlFor="bio">
+              Bio
+              <textarea
+                id="bio"
+                name="bio"
+                type="text"
+                placeholder="Bio"
+                ref={bioRef}
+              />
+            </label>
+            <label htmlFor="avatar">
+              Profile picture
+              <input
+                type="file"
+                id="avatar"
+                name="avatar"
+                accept="image/png, image/jpeg"
+                ref={profilePictureRef}
+              />
+            </label>
+            <button disabled={isUpdating} type="submit">
+              Save
+            </button>
+          </form>
+          <form onSubmit={handleSubmitPasswordChange}>
+            <label htmlFor="oldpassword">
+              Old Password
+              <input
+                type="password"
+                name="oldPassword"
+                id="oldpassword"
+                required
+              />
+            </label>
+            <label htmlFor="newpassword">
+              New Password
+              <input
+                type="password"
+                name="newPassword"
+                id="newpassword"
+                required
+              />
+            </label>
+            <button type="submit">Change Password</button>
+          </form>
+        </div>
       </div>
     </>
   );

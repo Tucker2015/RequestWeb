@@ -73,7 +73,11 @@ export default function Layout({ children }) {
                       <a>Requests</a>
                     </Link>
                   </li>
-
+                  <li>
+                    <Link href="/settings">
+                      <a>Settings</a>
+                    </Link>
+                  </li>
                   <li>
                     <a tabIndex={0} role="button" onClick={handleLogout}>
                       Logout

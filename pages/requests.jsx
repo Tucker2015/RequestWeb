@@ -7,7 +7,7 @@ import { useCurrentUser } from "@/hooks/index";
 const RequestPage = (props) => {
   const [user] = useCurrentUser();
 
-  function removeData(id, url) {
+  function removeData(id) {
     fetch(user.bio + "/" + id, {
       method: "DELETE",
     })
@@ -25,6 +25,7 @@ const RequestPage = (props) => {
     try {
       const userPosts = await axios.get(props.url);
       setPosts(userPosts.data); // set State
+      // console.log(userPosts);
     } catch (err) {
       console.error(err.message);
     }
@@ -58,7 +59,7 @@ const RequestPage = (props) => {
                 <div
                   className="card-title"
                   style={{
-                    background: "#442444",
+                    background: "rgb(47, 107, 181)",
                     color: "#fff",
                     fontSize: 26,
                     padding: 10,
@@ -69,17 +70,16 @@ const RequestPage = (props) => {
                   <h5>{contact}</h5>
                   <h5>{station}</h5>
                 </div>
-                <div className="card-body" style={{ fontSize: 20 }}>
+                <div
+                  className="card-body"
+                  style={{ fontSize: 20, padding: 10 }}
+                >
                   <h5>Comment : {comment}</h5>
                   <h5>Artist : {artist}</h5>
                   <h5>Track : {track}</h5>
                   <h5>Location : {location}</h5>
-                  <button
-                    className="btn"
-                    style={{}}
-                    onClick={() => removeData(id)}
-                  >
-                    <i class="fas fa-trash-alt"></i> Delete Request
+                  <button className="button" onClick={() => removeData(id)}>
+                    <i className="fas fa-trash-alt"></i> Delete Request
                   </button>
                 </div>
               </div>
@@ -100,17 +100,10 @@ const RequestPage = (props) => {
   return (
     <div className="text-light">
       <Head>
-        <title>Requests Page</title>
+        <title>Requests Page for {user.name}</title>
         <h3></h3>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1
-        className="text-center"
-        style={{ textAlign: "center", color: "#fff", fontSize: 30 }}
-      >
-        Digital Retroland
-      </h1>
-
       <div>
         <Card />
       </div>
