@@ -18,13 +18,13 @@ export default function Layout({ children }) {
   function Linker(props) {
     return (
       <li>
-        <div class="tooltip">
+        <div className="tooltip">
           <Link href={props.link}>
             <a>
-              <i class={props.icon}></i>
+              <i className={props.icon}></i>
             </a>
           </Link>
-          <span class="tooltiptext">{props.tip}</span>
+          <span className="tooltiptext">{props.tip}</span>
         </div>
       </li>
     );
