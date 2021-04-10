@@ -14,6 +14,22 @@ export default function Layout({ children }) {
     mutate(null);
     router.push("/");
   };
+
+  function Linker(props) {
+    return (
+      <li>
+        <div class="tooltip">
+          <Link href={props.link}>
+            <a>
+              <i class={props.icon}></i>
+            </a>
+          </Link>
+          <span class="tooltiptext">{props.tip}</span>
+        </div>
+      </li>
+    );
+  }
+
   return (
     <>
       <Head>
@@ -48,40 +64,30 @@ export default function Layout({ children }) {
               <a className="logo">Station Request Site</a>
             </Link>
             <ul>
-              <li>
-                <Link href="/">
-                  <a className="active">Home</a>
-                </Link>
-              </li>
+              <Linker link="/" icon="fas fa-home" tip="Home" />
               {!user ? (
                 <>
-                  <li>
-                    <Link href="/login">
-                      <a>Sign In</a>
-                    </Link>
-                  </li>
-                  {/* <li>
-                    <Link href="/signup">
-                      <a>Register</a>
-                    </Link>
-                  </li> */}
+                  <Linker link="/login" icon="fas fa-sign-in-alt" tip="Login" />
                 </>
               ) : (
                 <>
+                  <Linker
+                    link={`/user/${user._id}`}
+                    icon="fas fa-tasks"
+                    tip="Requests"
+                  />
+                  <Linker
+                    link="/settings"
+                    icon="fas fa-sliders-h"
+                    tip="Settings"
+                  />
                   <li>
-                    <Link href={`/user/${user._id}`}>
-                      <a>Requests</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/settings">
-                      <a>Settings</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <a tabIndex={0} role="button" onClick={handleLogout}>
-                      Logout
-                    </a>
+                    <div class="tooltip">
+                      <a tabIndex={0} role="button" onClick={handleLogout}>
+                        <i class="fas fa-sign-in-alt"></i>
+                      </a>
+                      <span class="tooltiptext">Log Out</span>
+                    </div>
                   </li>
                 </>
               )}

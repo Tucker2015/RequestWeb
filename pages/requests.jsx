@@ -61,7 +61,7 @@ const RequestPage = (props) => {
                   style={{
                     background: "rgb(47, 107, 181)",
                     color: "#fff",
-                    fontSize: 26,
+                    fontSize: 24,
                     padding: 10,
                     display: "flex",
                     justifyContent: "space-between",
