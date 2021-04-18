@@ -53,6 +53,7 @@ const RequestPage = (props) => {
               comment,
               location,
               station,
+              email,
             } = result;
             return (
               <div className="box" key={id}>
@@ -78,6 +79,8 @@ const RequestPage = (props) => {
                   <h5>Artist : {artist}</h5>
                   <h5>Track : {track}</h5>
                   <h5>Location : {location}</h5>
+                  <h5>Email : {email}</h5>
+
                   <button className="button" onClick={() => removeData(id)}>
                     <i className="fas fa-trash-alt"></i> Delete Request
                   </button>
