@@ -53,11 +53,12 @@ const RequestPage = (props) => {
               comment,
               location,
               station,
+              stationID,
               email,
             } = result;
 
             return (
-              <div className="box" key={id}>
+              <div className="box" key={(id, stationID)}>
                 <div
                   className="card-title"
                   style={{
@@ -70,7 +71,7 @@ const RequestPage = (props) => {
                   }}
                 >
                   <h5>{contact}</h5>
-                  <h5>{station}</h5>
+                  <h5>{station.stationID}</h5>
                 </div>
                 <div
                   className="card-body"
@@ -87,7 +88,7 @@ const RequestPage = (props) => {
                         "mailto:" +
                         email +
                         "?subject=Solicitud%20de%20seguimient%20en%20" +
-                        station +
+                        station.stationID +
                         "&body=Gracias%20por%20su%20solicitu%20de%20" +
                         artist +
                         "%20-%20" +
