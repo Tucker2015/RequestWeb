@@ -81,23 +81,14 @@ const RequestPage = (props) => {
                   <h5>Artist : {artist}</h5>
                   <h5>Track : {track}</h5>
                   <h5>Location : {location}</h5>
-                  {/* <h5>
+                  <h5>
                     Email :{" "}
                     <Link
-                      href={
-                        "mailto:" +
-                        email +
-                        "?subject=Solicitud%20de%20seguimient%20en%20" +
-                        station.stationID +
-                        "&body=Gracias%20por%20su%20solicitu%20de%20" +
-                        artist +
-                        "%20-%20" +
-                        track
-                      }
+                      href={"mailto:" + email + "?subject=" + station.stationID}
                     >
                       {email}
                     </Link>
-                  </h5> */}
+                  </h5>
 
                   <button className="button" onClick={() => removeData(id)}>
                     <i className="fas fa-trash-alt"></i> Delete Request
