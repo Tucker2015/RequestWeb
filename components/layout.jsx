@@ -82,11 +82,11 @@ export default function Layout({ children }) {
                     tip="Settings"
                   />
                   <li>
-                    <div class="tooltip">
+                    <div className="tooltip">
                       <a tabIndex={0} role="button" onClick={handleLogout}>
-                        <i class="fas fa-sign-in-alt"></i>
+                        <i className="fas fa-sign-in-alt"></i>
                       </a>
-                      <span class="tooltiptext">Log Out</span>
+                      <span className="tooltiptext">Log Out</span>
                     </div>
                   </li>
                 </>
